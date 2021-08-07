@@ -27,7 +27,7 @@ async def refunc(client,message):
         		else:
         			markup = InlineKeyboardMarkup([[ InlineKeyboardButton("FILE",callback_data = "doc") ]])
         		# dont chenge this message.reply_text     			        		
-        		await message.reply_text(f"**Select The OutPut Type From Below Option** \n**New File Name** : ```{out_filename}```",reply_to_message_id=mg_id,reply_markup = markup)
+        		await message.reply_text(f"**Select The OutPut Type From Below Option**\n**New File Name** : ```{out_filename}```",reply_to_message_id=mg_id,reply_markup = markup)
         		
         	except:
         		try:
