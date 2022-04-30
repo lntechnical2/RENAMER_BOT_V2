@@ -8,7 +8,7 @@
     "repository": "https://github.com/lntechnical2/RENAMER_BOT",
     "success_url": "https://telegram.dog/lntechnical",
     "env": {
-        "APP_ID": {
+        "API_ID": {
             "description": "Your APP ID From my.telegram.org ",
             "value": ""
         },
