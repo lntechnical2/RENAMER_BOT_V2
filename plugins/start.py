@@ -3,6 +3,7 @@ from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceRep
 import humanize
 from helper.database import  insert 
 from pyrogram.file_id import FileId
+CHANNEL = os.environ.get("CAHNNEL", "")
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
@@ -20,6 +21,14 @@ async def start(client,message):
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
+       update_channel = CHANNEL
+       user_id = message.from_user.id
+       if update_channel :
+       	try:
+       		await client.get_chat_member(update_channel, user_id)
+       	except UserNotParticipant:
+       		await message.reply_text("**__You are not subscribed my channel__** ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		return
        media = await client.get_messages(message.chat.id,message.message_id)
        file = media.document or media.video or media.audio 
        dcid = FileId.decode(file.file_id).dc_id
