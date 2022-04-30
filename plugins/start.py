@@ -3,7 +3,7 @@ from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceRep
 import humanize
 from helper.database import  insert ,find_one
 from pyrogram.file_id import FileId
-CHANNEL = os.environ.get("CAHNNEL", "")
+CHANNEL = os.environ.get("CHANNEL", "")
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
