@@ -23,6 +23,9 @@
         "ADMIN": {
             "description":"Add Your User ID"
         },
+        "CHANNEL": {
+            "description":"Your Channel User Name without @"
+        },
         "DB_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
             "value": ""
