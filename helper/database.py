@@ -34,3 +34,6 @@ def getid():
          id = key["_id"]
          values.append((id)) 
     return values
+    
+def find_one(id):
+	return dbcol.find_one({"_id":id})
