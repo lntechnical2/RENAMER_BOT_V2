@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
 import humanize
 from helper.database import  insert 
+from pyrogram.file_id import FileId
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
@@ -21,11 +22,12 @@ async def start(client,message):
 async def send_doc(client,message):
        media = await client.get_messages(message.chat.id,message.message_id)
        file = media.document or media.video or media.audio 
+       dcid = FileId.decode(file.file_id).dc_id
        filename = file.file_name
        filesize = humanize.naturalsize(file.file_size)
        fileid = file.file_id
        await message.reply_text(
-       f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}"""
+       f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid} """
        ,reply_to_message_id = message.message_id,
        reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename ",callback_data = "rename")
        ,InlineKeyboardButton("Cancel✖️",callback_data = "cancel")  ]]))
