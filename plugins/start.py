@@ -4,12 +4,25 @@ import humanize
 from helper.database import  insert ,find_one
 from pyrogram.file_id import FileId
 CHANNEL = os.environ.get("CAHNNEL", "")
+import datetime
+
+#Part of Day --------------------
+currentTime = datetime.datetime.now()
+
+if currentTime.hour < 12:
+	wish = "Good morning"
+elif 12 <= currentTime.hour < 18:
+	wish = 'Good afternoon.'
+else:
+	wish = 'Good evening.'
+
+#-------------------------------
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
 	insert(int(message.chat.id))
 	await message.reply_text(text =f"""
-	Hello {message.from_user.first_name }
+	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filenameto rename it__
 	""",reply_to_message_id = message.message_id ,  
