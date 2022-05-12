@@ -13,6 +13,8 @@ def insert(chat_id):
             try:
             	dbcol.insert_one(user_det)
             except:
+            	value = 'new'
+            	return value
             	pass
 
 def addthumb(chat_id, file_id):
