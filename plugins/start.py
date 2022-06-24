@@ -57,7 +57,7 @@ async def send_doc(client,message):
        	await app.send_chat_action(message.chat.id, "typing")
        	await message.reply_text(f"```Sorry Dude am not only for YOU \n Flood control is active so please wait for {ltime}```",reply_to_message_id = message.message_id)
        else:
-       	used_date = find(int(message.chat.id))
+       	
        	media = await client.get_messages(message.chat.id,message.message_id)
        	file = media.document or media.video or media.audio 
        	dcid = FileId.decode(file.file_id).dc_id
