@@ -21,7 +21,7 @@
             "value": ""
         },
         "ADMIN": {
-            "description":"Add Your User ID: You can get it by typing "/id" to https://t.me/MissRose_bot"
+            "description":"Add Your User ID: You can get it by typing '/id' to https://t.me/MissRose_bot"
         },
         "CHANNEL": {
             "description":"Your Channel User Name without @"
