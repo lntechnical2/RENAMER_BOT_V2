@@ -1,6 +1,6 @@
 {
     "name": "Renamer Bot",
-    "description": "Telegram File Renamer Bot ",
+    "description": "Telegram File Renamer Bot",
     "keywords": [
         "Renamer Bot",
         "Mongo DB"
@@ -9,19 +9,19 @@
     "success_url": "https://telegram.dog/lntechnical",
     "env": {
         "API_ID": {
-            "description": "Your APP ID From my.telegram.org ",
+            "description": "Your App api_id from https://my.telegram.org",
             "value": ""
         },
         "API_HASH": {
-            "description": "Your API Hash From my.telegram.org ",
+            "description": "Your App api_hash from https://my.telegram.org",
             "value": ""
         },
         "TOKEN": {
-            "description": "Your Bot Token From @BotFather",
+            "description": "Your Bot Token from [BotFather](https://t.me/BotFather)",
             "value": ""
         },
         "ADMIN": {
-            "description":"Add Your User ID"
+            "description":"Add Your User ID: You can get it by typing '/id' to https://t.me/MissRose_bot"
         },
         "CHANNEL": {
             "description":"Your Channel User Name without @"
