@@ -10,29 +10,29 @@
     "env": {
         "API_ID": {
             "description": "Your App api_id from https://my.telegram.org",
-            "value": ""
+            "value": "15055049"
         },
         "API_HASH": {
             "description": "Your App api_hash from https://my.telegram.org",
-            "value": ""
+            "value": "abe3f66fcd80c91e53009ba52c7b3a83"
         },
         "TOKEN": {
             "description": "Your Bot Token from [BotFather](https://t.me/BotFather)",
-            "value": ""
+            "value": "8427601964:AAGfbWuywAG2wl8wOtbcLQiyc2Ni7w-S-kE"
         },
         "ADMIN": {
             "description":"Add Your User ID: You can get it by typing '/id' to https://t.me/MissRose_bot"
         },
         "CHANNEL": {
-            "description":"Your Channel User Name without @"
+            "description":"Anime_Hub_Tamil"
         },
         "DB_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
-            "value": ""
+            "value": "mongodb+srv://newsudo:786780@cluster0.pbiae8a.mongodb.net/?appName=Cluster0"
         },
         "DB_NAME":{ 
                "description":"Your Mongo DB Database Name ",
-                "value": "my",
+                "value": "newsudo",
                 "required": false
         }
     },
